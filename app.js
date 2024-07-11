@@ -70,7 +70,7 @@ app.get("/listings/:id/edit", async (req, res) => {
 app.put("/listings/:id", async (req, res) => {
   let { id } = req.params;
   await Listing.findByIdAndUpdate(id, { ...req.body.listing }); //all object listing . Update the listing with the new data
-  res.redirect(`/listings/${id}`);
+  res.redirect(`/listings`);
 });
 
 //Delete route
